@@ -1,4 +1,4 @@
-import { createAsyncThunk, isRejectedWithValue } from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import { getContacts, postContact, removeContact } from 'service/contactsAPI';
 
 export const fetchContacts = createAsyncThunk(
