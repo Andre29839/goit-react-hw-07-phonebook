@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { addContact } from 'redux/contacts/contactsSlice';
+import { addContact } from 'redux/operations';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selector';
 import css from './ContactForm.module.css';
@@ -18,6 +18,7 @@ export const ContactForm = () => {
     dispatch(addContact(contact));
     setContact({ name: '', number: '' });
   };
+
   const handleOnChange = e => {
     const { name, value } = e.target;
     setContact({ ...contact, [name]: value });
